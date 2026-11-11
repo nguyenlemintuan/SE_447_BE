@@ -254,7 +254,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'Samsung Galaxy Z Fold5',
                 'slug' => 'samsung-galaxy-z-fold5',
-                'images' => 'https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/a/samsung-galaxy-z-fold-5-256gb_2.png',
+                'images' => 'https://cdn.tgdd.vn/Products/Images/42/301608/samsung-galaxy-zfold5-xanh-256gb-13.jpg',
                 'price' => 32990000,
                 'quantity' => 20,
                 'brand' => 'Samsung',
@@ -300,7 +300,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'Samsung Galaxy S23',
                 'slug' => 'samsung-galaxy-s23',
-                'images' => 'https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/a/samsung-galaxy-s23_4.png',
+                'images' => 'https://cdn.tgdd.vn/Products/Images/42/264060/samsung-galaxy-s23-600x600.jpg',
                 'price' => 14990000,
                 'quantity' => 45,
                 'brand' => 'Samsung',
@@ -488,7 +488,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'OPPO Reno11 Pro 5G',
                 'slug' => 'oppo-reno11-pro',
-                'images' => 'https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/o/p/oppo-reno-11-pro_1.png',
+                'images' => 'https://cdn.tgdd.vn/Products/Images/42/314210/oppo-reno-11-pro-xam-1-1.jpg',
                 'price' => 14990000,
                 'quantity' => 35,
                 'brand' => 'OPPO',
@@ -515,7 +515,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'MacBook Pro 14 M3 Pro',
                 'slug' => 'macbook-pro-14-m3-pro',
-                'images' => 'https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/m/a/macbook-pro-14-m3-pro-2023.png',
+                'images' => 'https://cdn.tgdd.vn/Products/Images/44/318228/macbook-pro-14-inch-m3-2023-311023-095050-600x600.jpg',
                 'price' => 48990000,
                 'quantity' => 25,
                 'brand' => 'Apple',
@@ -537,7 +537,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'MacBook Air 15 inch M3',
                 'slug' => 'macbook-air-15-m3',
-                'images' => 'https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/m/a/macbook-air-15-inch-m3-2024.png',
+                'images' => 'https://cdn.tgdd.vn/Products/Images/44/322616/macbook-air-15-inch-m3-2024-1-1.jpg',
                 'price' => 31990000,
                 'quantity' => 30,
                 'brand' => 'Apple',
@@ -625,7 +625,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'Asus Zenbook 14 OLED UX3405',
                 'slug' => 'asus-zenbook-14-oled-ux3405',
-                'images' => 'https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/a/s/asus-zenbook-14-oled-ux3405ma-pp151w.png',
+                'images' => 'https://cdnv2.tgdd.vn/mwg-static/tgdd/Products/Images/44/324821/asus-zenbook-14-oled-ux3405ma-ultra-9-pp475w-638763553168608279-600x600.jpg',
                 'price' => 28490000,
                 'quantity' => 30,
                 'brand' => 'Asus',
@@ -669,7 +669,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'Asus TUF Gaming A15',
                 'slug' => 'asus-tuf-gaming-a15',
-                'images' => 'https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cdn2.cellphones.com.vn/media/catalog/product/l/a/laptop_asus_tuf_gaming_a15_fa506ncg-hn184w_-_2.png',
+                'images' => 'https://cdnv2.tgdd.vn/mwg-static/tgdd/Products/Images/44/322568/asus-tuf-gaming-a15-fa506nc-r5-hn017w-170225-104947-915-600x600.jpg',
                 'price' => 20990000,
                 'quantity' => 40,
                 'brand' => 'Asus',
@@ -735,7 +735,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'HP Victus 16 Gaming',
                 'slug' => 'hp-victus-16-gaming',
-                'images' => 'https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/h/p/hp-victus-16-r0129tx.png',
+                'images' => 'https://cdn.tgdd.vn/Products/Images/44/270155/hp-gaming-victus-16-d0298tx-i5-64v74pa-600x600.jpg',
                 'price' => 23490000,
                 'quantity' => 35,
                 'brand' => 'HP',
@@ -757,7 +757,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'HP Pavilion 15',
                 'slug' => 'hp-pavilion-15',
-                'images' => 'https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/l/a/laptop-hp-pavilion-15-eg3093tu-8c567pa-1.png',
+                'images' => 'https://cdn.tgdd.vn/Products/Images/44/302207/hp-pavilion-15-eg2086tu-i3-7c0q8pa-12.jpg',
                 'price' => 15290000,
                 'quantity' => 45,
                 'brand' => 'HP',
@@ -783,7 +783,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'iPad Pro M4 11 inch',
                 'slug' => 'ipad-pro-m4-11-inch',
-                'images' => 'https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/i/p/ipad-pro-11-m4.png',
+                'images' => 'https://cdn.tgdd.vn/Products/Images/522/325515/ipad-pro-11-inch-m4-wifi-sliver-thumb-600x600.jpg',
                 'price' => 27990000,
                 'quantity' => 30,
                 'brand' => 'Apple',
@@ -875,7 +875,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'Samsung Galaxy Tab A9+ WiFi',
                 'slug' => 'samsung-galaxy-tab-a9-plus',
-                'images' => 'https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/a/samsung-galaxy-tab-a9-plus-5g.png',
+                'images' => 'https://cdn.tgdd.vn/Products/Images/522/315590/samsung-galaxy-tab-a9-plus-bac-1.jpg',
                 'price' => 4990000,
                 'quantity' => 70,
                 'brand' => 'Samsung',
@@ -898,7 +898,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'Xiaomi Pad 6',
                 'slug' => 'xiaomi-pad-6',
-                'images' => 'https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/x/i/xiaomi-pad-6-xam.png',
+                'images' => 'https://cdn.tgdd.vn/Products/Images/522/309848/xiaomi-pad-6-blue-thumb-600x600.jpg',
                 'price' => 7990000,
                 'quantity' => 45,
                 'brand' => 'Xiaomi',
