@@ -20,7 +20,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'iPhone 16 Pro Max',
                 'slug' => 'iphone-16-pro-max',
-                'images' => 'https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-blue-thumbnew-600x600.jpg',
+                'images' => 'https://cdn.tgdd.vn/Products/Images/42/329149/iphone-16-pro-max-sa-mac-thumb-600x600.jpg',
                 'price' => 34990000,
                 'quantity' => 45,
                 'brand' => 'Apple',
@@ -254,7 +254,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'Samsung Galaxy Z Fold5',
                 'slug' => 'samsung-galaxy-z-fold5',
-                'images' => 'https://images.samsung.com/is/image/samsung/p6pim/vn/feature/164698402/vn-feature-galaxy-z-flip5-f731-537756342?$FB_TYPE_A_MO_JPG$',
+                'images' => 'https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/a/samsung-galaxy-z-fold-5-256gb_2.png',
                 'price' => 32990000,
                 'quantity' => 20,
                 'brand' => 'Samsung',
@@ -300,7 +300,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'Samsung Galaxy S23',
                 'slug' => 'samsung-galaxy-s23',
-                'images' => 'https://sonpixel.vn/wp-content/uploads/2024/04/s23-ultra-5g-xanh.webp',
+                'images' => 'https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/a/samsung-galaxy-s23_4.png',
                 'price' => 14990000,
                 'quantity' => 45,
                 'brand' => 'Samsung',
@@ -488,7 +488,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'OPPO Reno11 Pro 5G',
                 'slug' => 'oppo-reno11-pro',
-                'images' => 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=600&auto=format&fit=crop',
+                'images' => 'https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/o/p/oppo-reno-11-pro_1.png',
                 'price' => 14990000,
                 'quantity' => 35,
                 'brand' => 'OPPO',
@@ -515,7 +515,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'MacBook Pro 14 M3 Pro',
                 'slug' => 'macbook-pro-14-m3-pro',
-                'images' => 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&auto=format&fit=crop',
+                'images' => 'https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/m/a/macbook-pro-14-m3-pro-2023.png',
                 'price' => 48990000,
                 'quantity' => 25,
                 'brand' => 'Apple',
@@ -537,7 +537,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'MacBook Air 15 inch M3',
                 'slug' => 'macbook-air-15-m3',
-                'images' => 'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=600&auto=format&fit=crop',
+                'images' => 'https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/m/a/macbook-air-15-inch-m3-2024.png',
                 'price' => 31990000,
                 'quantity' => 30,
                 'brand' => 'Apple',
@@ -559,7 +559,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'MacBook Air 13 inch M2',
                 'slug' => 'macbook-air-13-m2',
-                'images' => 'https://cdn.tgdd.vn/Products/Images/44/231244/macbook-air-m1-2020-gold-600x600.jpg',
+                'images' => 'https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/m/a/macbook_air_m2_1.png',
                 'price' => 24490000,
                 'quantity' => 45,
                 'brand' => 'Apple',
@@ -581,7 +581,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'Dell XPS 13 Plus 9320',
                 'slug' => 'dell-xps-13-plus-9320',
-                'images' => 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=600&auto=format&fit=crop',
+                'images' => 'https://laptoptcc.com/media/product/33602-dell-xps-9320.jpg',
                 'price' => 44990000,
                 'quantity' => 20,
                 'brand' => 'Dell',
@@ -603,7 +603,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'Dell Inspiron 15 3520',
                 'slug' => 'dell-inspiron-15-3520',
-                'images' => 'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=600&auto=format&fit=crop',
+                'images' => 'https://img.tgdd.vn/imgt/ecom/f_webp,fit_outside,quality_100,s_1290x738/https://cdn.tgdd.vn/Products/Images/44/333886/Slider/vi-vn-dell-inspiron-15-3520-i5-n5i5057w1-slider-2.jpg',
                 'price' => 14490000,
                 'quantity' => 50,
                 'brand' => 'Dell',
@@ -625,7 +625,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'Asus Zenbook 14 OLED UX3405',
                 'slug' => 'asus-zenbook-14-oled-ux3405',
-                'images' => 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&auto=format&fit=crop',
+                'images' => 'https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/a/s/asus-zenbook-14-oled-ux3405ma-pp151w.png',
                 'price' => 28490000,
                 'quantity' => 30,
                 'brand' => 'Asus',
@@ -647,7 +647,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'Asus ROG Zephyrus G16 Gaming',
                 'slug' => 'asus-rog-zephyrus-g16',
-                'images' => 'https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=600&auto=format&fit=crop',
+                'images' => 'https://dlcdnwebimgs.asus.com/gain/E4E1A4CD-1261-43D1-A18D-C91711A989AD/w300/fwebp',
                 'price' => 52990000,
                 'quantity' => 15,
                 'brand' => 'Asus',
@@ -669,7 +669,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'Asus TUF Gaming A15',
                 'slug' => 'asus-tuf-gaming-a15',
-                'images' => 'https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=600&auto=format&fit=crop',
+                'images' => 'https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cdn2.cellphones.com.vn/media/catalog/product/l/a/laptop_asus_tuf_gaming_a15_fa506ncg-hn184w_-_2.png',
                 'price' => 20990000,
                 'quantity' => 40,
                 'brand' => 'Asus',
@@ -691,7 +691,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'Lenovo ThinkPad X1 Carbon Gen 11',
                 'slug' => 'lenovo-thinkpad-x1-carbon-gen-11',
-                'images' => 'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=600&auto=format&fit=crop',
+                'images' => 'https://bizweb.dktcdn.net/thumb/1024x1024/100/446/400/products/lenovo-thinkpad-x1-carbon-gen-11-1-gia-loc.jpg?v=1744014557240',
                 'price' => 42990000,
                 'quantity' => 20,
                 'brand' => 'Lenovo',
@@ -713,7 +713,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'Lenovo Legion Pro 5 Gaming',
                 'slug' => 'lenovo-legion-pro-5',
-                'images' => 'https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=600&auto=format&fit=crop',
+                'images' => 'https://cdn2.cellphones.com.vn/x/media/catalog/product/l/a/laptop-lenovo-legion-5-pro-16ach6h-82jq001vvn-1.jpg',
                 'price' => 36990000,
                 'quantity' => 25,
                 'brand' => 'Lenovo',
@@ -735,7 +735,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'HP Victus 16 Gaming',
                 'slug' => 'hp-victus-16-gaming',
-                'images' => 'https://images.unsplash.com/photo-1544731612-de7f96afe55f?w=600&auto=format&fit=crop',
+                'images' => 'https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/h/p/hp-victus-16-r0129tx.png',
                 'price' => 23490000,
                 'quantity' => 35,
                 'brand' => 'HP',
@@ -757,7 +757,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'HP Pavilion 15',
                 'slug' => 'hp-pavilion-15',
-                'images' => 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&auto=format&fit=crop',
+                'images' => 'https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/l/a/laptop-hp-pavilion-15-eg3093tu-8c567pa-1.png',
                 'price' => 15290000,
                 'quantity' => 45,
                 'brand' => 'HP',
@@ -783,7 +783,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'iPad Pro M4 11 inch',
                 'slug' => 'ipad-pro-m4-11-inch',
-                'images' => 'https://cdn2.fptshop.com.vn/unsafe/512x0/filters:format(webp):quality(75)/2024_5_10_638509364503658668_ipad-pro-11-inch-m4-2024-bac.jpg',
+                'images' => 'https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/i/p/ipad-pro-11-m4.png',
                 'price' => 27990000,
                 'quantity' => 30,
                 'brand' => 'Apple',
@@ -806,7 +806,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'iPad Air 5 M1',
                 'slug' => 'ipad-air-5-m1',
-                'images' => 'https://images.unsplash.com/photo-1561154464-82e9adf32764?w=600&auto=format&fit=crop',
+                'images' => 'https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/i/p/ipad-air-5.png',
                 'price' => 14690000,
                 'quantity' => 50,
                 'brand' => 'Apple',
@@ -852,7 +852,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'Samsung Galaxy Tab S9 Ultra',
                 'slug' => 'samsung-galaxy-tab-s9-ultra',
-                'images' => 'https://images.unsplash.com/photo-1589739900266-43b2843f4c12?w=600&auto=format&fit=crop',
+                'images' => 'https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/a/samsung-galaxy-tab-s9-ultra_1.png',
                 'price' => 25990000,
                 'quantity' => 20,
                 'brand' => 'Samsung',
@@ -875,7 +875,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'Samsung Galaxy Tab A9+ WiFi',
                 'slug' => 'samsung-galaxy-tab-a9-plus',
-                'images' => 'https://images.unsplash.com/photo-1589739900243-4b52cd9b104e?w=600&auto=format&fit=crop',
+                'images' => 'https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/a/samsung-galaxy-tab-a9-plus-5g.png',
                 'price' => 4990000,
                 'quantity' => 70,
                 'brand' => 'Samsung',
@@ -898,7 +898,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'Xiaomi Pad 6',
                 'slug' => 'xiaomi-pad-6',
-                'images' => 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600&auto=format&fit=crop',
+                'images' => 'https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/x/i/xiaomi-pad-6-xam.png',
                 'price' => 7990000,
                 'quantity' => 45,
                 'brand' => 'Xiaomi',
@@ -925,7 +925,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'Apple Watch Series 9 GPS 45mm',
                 'slug' => 'apple-watch-series-9-45mm',
-                'images' => 'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&auto=format&fit=crop',
+                'images' => 'https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/apple-watch-series-9.png',
                 'price' => 10490000,
                 'quantity' => 35,
                 'brand' => 'Apple',
@@ -947,7 +947,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'Apple Watch Ultra 2 Titanium 49mm',
                 'slug' => 'apple-watch-ultra-2',
-                'images' => 'https://images.unsplash.com/photo-1510017803434-a899398421b3?w=600&auto=format&fit=crop',
+                'images' => 'https://cdn2.cellphones.com.vn/insecure/rs:fill:250:250/q:100/plain/https://cellphones.com.vn/media/catalog/product/a/p/apple_lte_11__1.png',
                 'price' => 20990000,
                 'quantity' => 20,
                 'brand' => 'Apple',
@@ -968,7 +968,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'AirPods Pro 2 Type-C',
                 'slug' => 'airpods-pro-2-type-c',
-                'images' => 'https://upload.wikimedia.org/wikipedia/commons/b/b9/AirPods_Pro_3_with_case.jpg',
+                'images' => 'https://bizweb.dktcdn.net/thumb/1024x1024/100/459/953/products/airpods-pro-2-reseller-com-vn-1.jpg',
                 'price' => 5690000,
                 'quantity' => 80,
                 'brand' => 'Apple',
@@ -988,7 +988,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'Apple Pencil 2',
                 'slug' => 'apple-pencil-2',
-                'images' => 'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=600&auto=format&fit=crop',
+                'images' => 'https://bizweb.dktcdn.net/thumb/1024x1024/100/459/953/products/but-cam-ung-apple-pencil-2-ead90748-d30f-4f4c-b74a-dd93766e39a2.jpg',
                 'price' => 2990000,
                 'quantity' => 60,
                 'brand' => 'Apple',
@@ -1006,7 +1006,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'Củ sạc nhanh Apple 20W Type-C',
                 'slug' => 'cu-sac-nhanh-apple-20w',
-                'images' => 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=600&auto=format&fit=crop',
+                'images' => 'https://salt.tikicdn.com/cache/750x750/ts/product/fd/cf/d8/f0c3f30eb6b1a1ec92e2b5e75b97e319.jpg',
                 'price' => 490000,
                 'quantity' => 120,
                 'brand' => 'Apple',
@@ -1024,7 +1024,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'Samsung Galaxy Watch6 Classic 47mm',
                 'slug' => 'samsung-galaxy-watch6-classic',
-                'images' => 'https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=600&auto=format&fit=crop',
+                'images' => 'https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/s/a/samsung-galaxy-watch-6-classic-43mm-slider_1__1.png',
                 'price' => 7490000,
                 'quantity' => 30,
                 'brand' => 'Samsung',
@@ -1045,7 +1045,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'Tai nghe Sony WH-1000XM5',
                 'slug' => 'sony-wh-1000xm5',
-                'images' => 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop',
+                'images' => 'https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/0/4/04_6_3.png',
                 'price' => 7990000,
                 'quantity' => 35,
                 'brand' => 'Sony',
@@ -1064,7 +1064,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'Tai nghe Sony WF-1000XM5',
                 'slug' => 'sony-wf-1000xm5',
-                'images' => 'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&auto=format&fit=crop',
+                'images' => 'https://salt.tikicdn.com/cache/750x750/ts/product/42/4a/80/ae74ef5861264d57becd55accc770dc0.png',
                 'price' => 5990000,
                 'quantity' => 40,
                 'brand' => 'Sony',
@@ -1083,7 +1083,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'Chuột không dây Logitech MX Master 3S',
                 'slug' => 'logitech-mx-master-3s',
-                'images' => 'https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=600&auto=format&fit=crop',
+                'images' => 'https://bizweb.dktcdn.net/thumb/grande/100/329/122/products/chuot-khong-day-logitech-mx-master-3s.png?v=1752901308837',
                 'price' => 2490000,
                 'quantity' => 60,
                 'brand' => 'Logitech',
@@ -1102,7 +1102,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'Bàn phím cơ Keychron K2 Pro',
                 'slug' => 'keychron-k2-pro',
-                'images' => 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600&auto=format&fit=crop',
+                'images' => 'https://bizweb.dktcdn.net/thumb/grande/100/329/122/products/ban-phim-co-khong-day-keychron-k2-pro-rgb-hotswap-01.jpg?v=1719559233323',
                 'price' => 2190000,
                 'quantity' => 50,
                 'brand' => 'Keychron',
@@ -1121,7 +1121,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'Củ sạc Anker Prime 67W GaN 3 cổng',
                 'slug' => 'anker-prime-67w-gan',
-                'images' => 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=600&auto=format&fit=crop',
+                'images' => 'https://cdn2.cellphones.com.vn/x/media/catalog/product/c/u/cu-sac-anker-prime-3-cong-2c1a-67w-a2669.jpg',
                 'price' => 1190000,
                 'quantity' => 75,
                 'brand' => 'Anker',
@@ -1140,7 +1140,7 @@ class ProductsSeeder extends Seeder
             [
                 'title' => 'Pin dự phòng Baseus Blade 100W 20000mAh',
                 'slug' => 'pin-du-phong-baseus-blade-100w',
-                'images' => 'https://images.unsplash.com/photo-1584905066893-7d5c142ba4e1?w=600&auto=format&fit=crop',
+                'images' => 'https://bizweb.dktcdn.net/thumb/1024x1024/100/425/492/products/pin-sac-du-phong-sieu-nhanh-100w-cho-dien-thoai-laptop-baseus-blade-power-digital-display-fast-charging-power-bank-20000mah-12.jpg?v=1669187420530',
                 'price' => 1350000,
                 'quantity' => 45,
                 'brand' => 'Baseus',
