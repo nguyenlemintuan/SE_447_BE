@@ -11,34 +11,42 @@ use Illuminate\Support\Facades\DB;
 class DashboardController extends Controller
 {
     public function getData(Request $request)
-{
-    // Chỉ tính đơn hàng có tinh_trang = 1
-    $totalOrders = Orders::where('tinh_trang', 1)->count();
-    $totalRevenue = Orders::where('tinh_trang', 1)->sum('tong_tien');
+    {
+        // Tính tổng số đơn hàng đã hoàn tất (tinh_trang = 1) hoặc tính toàn bộ đơn nếu chưa có đơn hoàn tất
+        $hasCompletedOrders = Orders::where('tinh_trang', 1)->exists();
+        $condition = $hasCompletedOrders ? [['tinh_trang', '=', 1]] : [];
 
-    $totalCustomers = Customer::count();
-    $bounceRate = rand(10, 40); // tạm random cho có số %
+        $totalOrders = Orders::where($condition)->count();
+        $totalRevenue = Orders::where($condition)->sum('tong_tien');
 
-    // Thống kê theo ngày, chỉ tính đơn hàng tinh_trang = 1
-    $sales = Orders::where('tinh_trang', 1)
-        ->select(
-            DB::raw('DATE(created_at) as ngay'),
-            DB::raw('COUNT(id) as so_don'),
-            DB::raw('SUM(tong_tien) as tong_tien')
-        )
-        ->groupBy('ngay')
-        ->orderBy('ngay', 'asc')
-        ->get();
+        $totalCustomers = Customer::count();
+        $bounceRate = rand(15, 35);
 
-    return response()->json([
-        'status' => true,
-        'data' => [
-            'totalOrders' => $totalOrders,
-            'totalRevenue' => $totalRevenue,
-            'totalCustomers' => $totalCustomers,
-            'bounceRate' => $bounceRate,
-            'sales' => $sales
-        ]
-    ]);
-}
+        // Thống kê theo ngày
+        $sales = Orders::where($condition)
+            ->select(
+                DB::raw('DATE(created_at) as ngay'),
+                DB::raw('COUNT(id) as so_don'),
+                DB::raw('SUM(tong_tien) as tong_tien')
+            )
+            ->groupBy('ngay')
+            ->orderBy('ngay', 'asc')
+            ->get();
+
+        return response()->json([
+            'status' => true,
+            'data' => [
+                'totalOrders' => $totalOrders,
+                'totalRevenue' => $totalRevenue,
+                'totalCustomers' => $totalCustomers,
+                'bounceRate' => $bounceRate,
+                'sales' => $sales
+            ]
+        ]);
+    }
+
+    public function thongkeDoanhThu(Request $request)
+    {
+        return $this->getData($request);
+    }
 }

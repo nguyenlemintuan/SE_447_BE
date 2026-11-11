@@ -19,4 +19,9 @@ class Customer extends Authenticatable
         'dia_chi',
         'ngay_sinh',
     ];
+
+    public function orders()
+    {
+        return $this->hasMany(Orders::class, 'id_khach_hang');
+    }
 }

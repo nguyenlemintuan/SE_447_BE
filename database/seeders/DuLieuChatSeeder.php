@@ -34,11 +34,11 @@ class DuLieuChatSeeder extends Seeder
     private function trainStaticData(): void
     {
         $items = [
-            "SHOP SE397 chuyên bán điện thoại chính hãng.",
-            "Giờ làm việc: 08:00 - 21:00 mỗi ngày. Hotline: 0909 888 777. Email: support@shopse397.com.",
+            "LifeTech chuyên bán điện thoại, laptop, tablet, smartwatch và phụ kiện công nghệ chính hãng.",
+            "Giờ làm việc: 08:00 - 21:30 mỗi ngày. Hotline: 1900 232 460. Email: support@lifetech.vn.",
             "Chính sách bảo hành: đổi trả trong 7 ngày nếu lỗi phần cứng, bảo hành tối thiểu 12 tháng tùy sản phẩm.",
             "Hỗ trợ giao hàng toàn quốc, thanh toán COD hoặc chuyển khoản.",
-            "SHOP SE397 KHÔNG bán: quần áo, giày dép, túi xách, thực phẩm, hoặc các mặt hàng không liên quan công nghệ.",
+            "LifeTech KHÔNG bán: quần áo, giày dép, túi xách, thực phẩm, hoặc các mặt hàng không liên quan công nghệ.",
         ];
 
         foreach ($items as $text) {

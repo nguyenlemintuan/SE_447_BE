@@ -83,7 +83,7 @@ class CustomerController extends Controller
     {
         $customer = Customer::where('email', $request->email)->first();
 
-        if (!$customer || $request->password !== $customer->password) {
+        if (!$customer || !Hash::check($request->password, $customer->password)) {
 
             return response()->json([
                 'status' => 0,
@@ -134,7 +134,7 @@ class CustomerController extends Controller
         Customer::create([
             'ho_va_ten'     => $request->ho_va_ten,
             'email'         => $request->email,
-            'password'      => $request->password,
+            'password'      => Hash::make($request->password),
             'so_dien_thoai' => $request->so_dien_thoai,
             'dia_chi'       => $request->dia_chi,
             'ngay_sinh'       => $request->ngay_sinh,
@@ -206,12 +206,10 @@ class CustomerController extends Controller
      public function updatePassword(Request $request)
     {
         $user = Auth::guard('sanctum')->user();
-        $data = Customer::where('id', $user->id)
-            ->where('password', $request->old_password)
-            ->first();
-        if ($data) {
+        $data = Customer::find($user->id);
+        if ($data && Hash::check($request->old_password, $data->password)) {
             $data->update([
-                'password' => $request->password,
+                'password' => Hash::make($request->password),
             ]);
             return response()->json([
                 'status'    => 1,

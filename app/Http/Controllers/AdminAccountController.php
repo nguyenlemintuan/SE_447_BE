@@ -14,6 +14,7 @@ use App\Models\Customer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 
 class AdminAccountController extends Controller
@@ -36,14 +37,22 @@ class AdminAccountController extends Controller
     }
     public function update(capNhatAccountRequest $request)
     {
-        AdminAccount::find($request->id)->update([
+        $account = AdminAccount::find($request->id);
+        $data = [
             'ho_va_ten'   => $request->ho_va_ten,
             'email'       => $request->email,
-            'password'    => $request->password,
             'so_dien_thoai' => $request->so_dien_thoai,
             'dia_chi'     => $request->dia_chi,
             'ngay_sinh'   => $request->ngay_sinh,
-        ]);
+        ];
+
+        if ($request->filled('password')
+            && $request->password !== $account->password
+            && !Hash::check($request->password, $account->password)) {
+            $data['password'] = Hash::make($request->password);
+        }
+
+        $account->update($data);
         return response()->json([
             'status' => true,
             'message' => "Đã cập nhật tài khoản " . $request->ho_va_ten . " thành công.",
@@ -61,14 +70,12 @@ class AdminAccountController extends Controller
 
     public function Login(AdminDangNhapRequest $request)
     {
-        $check = AdminAccount::where('email', $request->email)
-            ->where('password', $request->password)
-            ->first();
-        if ($check) {
+        $admin = AdminAccount::where('email', $request->email)->first();
+        if ($admin && Hash::check($request->password, $admin->password)) {
             return response()->json([
                 'status' => 1,
                 'message' => "Đã đăng nhập thành công.",
-                'token' => $check->createToken('token_admin')->plainTextToken,
+                'token' => $admin->createToken('token_admin')->plainTextToken,
             ]);
         } else {
             return response()->json([
@@ -116,7 +123,7 @@ class AdminAccountController extends Controller
         AdminAccount::create([
             'ho_va_ten'     => $request->ho_va_ten,
             'email'         => $request->email,
-            'password'      => $request->password,
+            'password'      => Hash::make($request->password),
             'so_dien_thoai' => $request->so_dien_thoai,
             'dia_chi'       => $request->dia_chi,
             'ngay_sinh'     => $request->ngay_sinh,
@@ -131,7 +138,7 @@ class AdminAccountController extends Controller
         Customer::create([
             'ho_va_ten'     => $request->ho_va_ten,
             'email'         => $request->email,
-            'password'      => $request->password,
+            'password'      => Hash::make($request->password),
             'so_dien_thoai' => $request->so_dien_thoai,
             'dia_chi'       => $request->dia_chi,
             'ngay_sinh'     => $request->ngay_sinh,
@@ -143,14 +150,22 @@ class AdminAccountController extends Controller
     }
      public function updateCustomer(capNhatCustomerRequest $request)
     {
-        Customer::find($request->id)->update([
+        $customer = Customer::find($request->id);
+        $data = [
             'ho_va_ten'   => $request->ho_va_ten,
             'email'       => $request->email,
-            'password'    => $request->password,
             'so_dien_thoai' => $request->so_dien_thoai,
             'dia_chi'     => $request->dia_chi,
             'ngay_sinh'   => $request->ngay_sinh,
-        ]);
+        ];
+
+        if ($request->filled('password')
+            && $request->password !== $customer->password
+            && !Hash::check($request->password, $customer->password)) {
+            $data['password'] = Hash::make($request->password);
+        }
+
+        $customer->update($data);
         return response()->json([
             'status' => true,
             'message' => "Đã cập nhật tài khoản " . $request->ho_va_ten . " thành công.",

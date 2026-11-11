@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminAccountController;
+use App\Http\Controllers\AiController;
 use App\Http\Controllers\ChatBotController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -97,6 +98,11 @@ Route::post('/sepay/webhook/check-status', [SePayWebhookController::class, 'chec
 
 //Chatbot
 Route::post('customer/chat', [ChatBotController::class, 'chat']);
+
+//AI tính năng
+Route::post('/ai/search', [AiController::class, 'search']);
+Route::post('/ai/compare', [AiController::class, 'compare']);
+Route::post('/ai/recommend', [AiController::class, 'recommend']);
 
 //Đánh Giá
 Route::post('/customer/products/{id}/review', [ProductsController::class, 'addReview'])->middleware('customerMiddle');

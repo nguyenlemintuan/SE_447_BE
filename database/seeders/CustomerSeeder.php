@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class CustomerSeeder extends Seeder
 {
@@ -17,7 +18,7 @@ class CustomerSeeder extends Seeder
             [
                 'ho_va_ten' => 'Nguyễn Văn A',
                 'email' => 'customer1@gmail.com',
-                'password' => '123456',
+                'password' => Hash::make('123456'),
                 'so_dien_thoai' => '0901111111',
                 'dia_chi' => 'Ha Noi',
                 'ngay_sinh' => '2000-05-10',
@@ -27,7 +28,7 @@ class CustomerSeeder extends Seeder
             [
                 'ho_va_ten' => 'Trần Thị B',
                 'email' => 'customer2@gmail.com',
-                'password' => '123456',
+                'password' => Hash::make('123456'),
                 'so_dien_thoai' => '0902222222',
                 'dia_chi' => 'TP HCM',
                 'ngay_sinh' => '1999-08-21',
@@ -37,7 +38,7 @@ class CustomerSeeder extends Seeder
             [
                 'ho_va_ten' => 'Lê Văn C',
                 'email' => 'customer3@gmail.com',
-                'password' => '123456',
+                'password' => Hash::make('123456'),
                 'so_dien_thoai' => '0903333333',
                 'dia_chi' => 'Da Nang',
                 'ngay_sinh' => '2001-02-15',

@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Http;
 use App\Models\DuLieuChat;
+use App\Services\GeminiService;
 
 class ChatBotController extends Controller
 {
@@ -15,21 +15,18 @@ class ChatBotController extends Controller
             return response()->json(['error' => 'No message provided'], 400);
         }
 
+        $gemini = app(GeminiService::class);
+
+        if (!$gemini->configured()) {
+            return response()->json([
+                'error' => 'Chatbot chưa được cấu hình. Vui lòng thêm GEMINI_API_KEY vào .env.',
+            ], 503);
+        }
+
         try {
-            $apiKey = env('GEMINI_API_KEY');
+            set_time_limit(120);
 
-            $embeddingResponse = Http::withHeaders([
-                'Content-Type' => 'application/json',
-            ])->post("https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:embedContent?key={$apiKey}", [
-                'content' => [
-                    'parts' => [
-                        ['text' => $message]
-                    ]
-                ]
-            ]);
-
-            $embeddingData = $embeddingResponse->json();
-            $userEmbedding = $embeddingData['embedding']['values'] ?? null;
+            $userEmbedding = $gemini->embed($message);
 
             if (!$userEmbedding) {
                 return response()->json(['error' => 'Không tạo được embedding từ câu hỏi'], 500);
@@ -64,9 +61,9 @@ class ChatBotController extends Controller
             $bestScore = isset($topMatches[0]['score']) ? floatval($topMatches[0]['score']) : null;
             $context = implode("\n", array_column($topMatches, 'content'));
 
-            $prompt = "Dưới đây là thông tin nội bộ của website SHOP SE397:\n{$context}\n\n"
+            $prompt = "Dưới đây là thông tin nội bộ của website LifeTech:\n{$context}\n\n"
                 . "Người dùng hỏi: {$message}\n"
-                . "Bạn là một nhân viên tư vấn thông minh của SHOP SE397, nhiệm vụ là trả lời câu hỏi khách hàng dựa trên dữ liệu nội bộ. "
+                . "Bạn là một nhân viên tư vấn thông minh của LifeTech, nhiệm vụ là trả lời câu hỏi khách hàng dựa trên dữ liệu nội bộ. "
 
                 . "Hãy trả lời theo các hướng dẫn sau:\n\n"
                 . "1. **Ưu tiên thông tin thực tế và đầy đủ**:\n"
@@ -82,10 +79,10 @@ class ChatBotController extends Controller
                 . "5. **Ưu tiên các thông tin quan trọng, tránh trả thông tin không cần thiết**:\n"
                 . "   - Chỉ dùng hình ảnh minh họa nếu không còn thông tin thực tế.\n"
                 . "6. **Nếu không tìm thấy dữ liệu liên quan hoặc câu hỏi ngoài lĩnh vực kinh doanh**:\n"
-                . "   - SHOP SE397 chuyên bán: Điện thoại, Laptop, Tablet, Smartwatch, Phụ kiện công nghệ.\n"
+                . "   - LifeTech chuyên bán: Điện thoại, Laptop, Tablet, Smartwatch, Phụ kiện công nghệ.\n"
                 . "   - Nếu khách hỏi về thứ không liên quan (quần áo, thực phẩm, v.v.), hãy trả lời minh bạch:\n"
-                . "   - 'Xin lỗi, SHOP SE397 hiện chỉ chuyên bán các sản phẩm như điện thoại. Chúng tôi không có mặt hàng [tên hàng] bạn thắc mắc.'\n"
-                . "   - KHÔNG nói chuyện chung chung hay off-topic. Luôn luôn ghi nhớ shop chỉ bán điện thoại.\n"
+                . "   - 'Xin lỗi, LifeTech hiện chỉ chuyên bán các sản phẩm công nghệ. Chúng tôi không có mặt hàng [tên hàng] bạn thắc mắc.'\n"
+                . "   - KHÔNG nói chuyện chung chung hay off-topic. Luôn luôn ghi nhớ LifeTech chỉ bán sản phẩm công nghệ.\n"
                 . "7. **Định dạng trả lời**:\n"
                 . "   - Chỉ trả text hoàn chỉnh, không trả JSON hay code.\n"
                 . "   - Nếu có nhiều thông tin, hãy chia câu hợp lý để dễ đọc.\n"
@@ -94,38 +91,24 @@ class ChatBotController extends Controller
                 . "   - Nếu câu hỏi không rõ ràng, cố gắng hỏi lại một cách lịch sự hoặc trả lời thông tin liên quan nhất.\n\n"
                 . "Hãy trả lời câu hỏi của người dùng dựa trên dữ liệu nội bộ một cách chính xác, liên quan, tự nhiên và thân thiện.";
 
-            $apiResponse = Http::withHeaders([
-                'Content-Type' => 'application/json',
-            ])->post("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={$apiKey}", [
-                'contents' => [
-                    [
-                        'role' => 'user',
-                        'parts' => [
-                            ['text' => $prompt]
-                        ]
-                    ]
-                ]
-            ]);
+            $reply = $gemini->generateText($prompt);
 
-            $responseData = $apiResponse->json();
-            $reply = $responseData['candidates'][0]['content']['parts'][0]['text'] ?? null;
-
-            if ($reply) {
-                return response()->json([
-                    'reply' => $reply,
-                    'match' => $bestMatch,
-                    'score' => round($bestScore, 3)
-                ]);
-            } else {
+            if (!$reply) {
                 return response()->json([
                     'error' => 'Không có phản hồi từ Gemini',
-                    'raw' => $responseData
-                ], 500);
+                ], 503);
             }
+
+            return response()->json([
+                'reply' => $reply,
+                'match' => $bestMatch,
+                'score' => round($bestScore, 3)
+            ]);
         } catch (\Exception $e) {
+            \Log::error('Chatbot API failed: ' . preg_replace('/key=[^&\s]+/', 'key=***', $e->getMessage()));
+
             return response()->json([
                 'error' => 'API request failed',
-                'details' => $e->getMessage()
             ], 500);
         }
     }
